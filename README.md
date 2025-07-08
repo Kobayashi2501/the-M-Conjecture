@@ -104,6 +104,8 @@ Definition ConventionalMotive (f : FiltObj) : Mot :=
   Phi (MotiveAK f).
 See Appendix I for full Coq/Lean-compatible encodings.
 
+---
+
 🔮 Implications
 If true, the M Conjecture enables:
 
