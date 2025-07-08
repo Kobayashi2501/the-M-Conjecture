@@ -37,25 +37,19 @@ AK-theoretic motives arise as:
 
 ## 🔬 Formal Statement (Collapse-Theoretic)
 
-If $\mathcal{F}_X$ is collapse-admissible, then:
+If F_X is collapse-admissible, then:
 
 - The AK-theoretic motive is defined as:
 
-  $$
-  M_{\mathrm{AK}}(X) := \Pi_{\mathrm{mot}}(\mathcal{F}_X)
-  $$
+  **M_AK(X) := Pi_mot(F_X)**
 
 - Mirror Symmetry holds structurally:
 
-  $$
-  M_{\mathrm{AK}}(X) \cong M_{\mathrm{AK}}(X^\vee)
-  $$
+  **M_AK(X) ≅ M_AK(X^∨)**
 
 - The conventional motive is retrieved functorially:
 
-  $$
-  M(X) := \Phi(M_{\mathrm{AK}}(X))
-  $$
+  **M(X) := Φ(M_AK(X))**
 
 ---
 
