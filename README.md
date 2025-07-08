@@ -102,32 +102,41 @@ Definition MotiveAK (f : FiltObj) : MotAK :=
 
 Definition ConventionalMotive (f : FiltObj) : Mot :=
   Phi (MotiveAK f).
-See Appendix I for full Coq/Lean-compatible encodings.
+See [Appendix I](./Appendix/I.tex) for full Coq/Lean-compatible encodings.
 
 ---
 
-🔮 Implications
-If true, the M Conjecture enables:
+### 🔮 Implications
 
-Structural demystification of motives
+If true, the **M Conjecture** enables:
 
-A visual, testable formulation of Mirror Symmetry
+- Structural demystification of motives  
+- A visual, testable formulation of Mirror Symmetry  
+- Collapse-based access to motive classification  
+- A unification of number theory, algebraic geometry, and homotopy theory through observable simplification mechanisms  
 
-Collapse-based access to motive classification
+---
 
-A unification of number theory, algebraic geometry, and homotopy theory through observable simplification mechanisms
+### 📁 Files
 
-📁 Files
-The_M_Conjecture.tex: Full LaTeX source
+- `The_M_Conjecture.tex`: Full LaTeX source
+- `The_M_Conjecture.PDF`
+- `README.md`: This document  
 
-README.md: This document
+---
+
 
 ## 📚 Further Reading
 
 - [AK-HDPST Theory](https://github.com/Kobayashi2501/AK-High-Dimensional-Projection-Structural-Theory)
 
-📬 Contact
-Author: A. Kobayashi
-Co-developed with ChatGPT Research Partner
-Email: dollops2501@icloud.com
-GitHub: @Kobayashi2501
+---
+
+### 📬 Contact
+
+**Author**: A. Kobayashi  
+_Co-developed with ChatGPT Research Partner_  
+📧 Email: [dollops2501@icloud.com](mailto:dollops2501@icloud.com)  
+🐙 GitHub: [@Kobayashi2501](https://github.com/Kobayashi2501)
+
+> *Collapse is not decay — it is the emergence of structural essence.*
