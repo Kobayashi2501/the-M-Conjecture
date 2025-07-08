@@ -89,23 +89,6 @@ Traditional motives were:
 
 ---
 
-## 🛠 Type-Theoretic Encoding (Excerpt)
-
-```coq
-Parameter FiltObj : Type.
-Parameter Collapse : FiltObj -> FiltObj.
-Parameter PiMot : FiltObj -> MotAK.
-Parameter Phi : MotAK -> Mot.
-
-Definition MotiveAK (f : FiltObj) : MotAK :=
-  PiMot f.
-
-Definition ConventionalMotive (f : FiltObj) : Mot :=
-  Phi (MotiveAK f).
-See [Appendix I](./Appendix/I.tex) for full Coq/Lean-compatible encodings.
-
----
-
 ### 🔮 Implications
 
 If true, the **M Conjecture** enables:
