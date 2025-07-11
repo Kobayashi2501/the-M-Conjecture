@@ -108,6 +108,9 @@ If true, the **M Conjecture** enables:
 
 ---
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15860560.svg)](https://doi.org/10.5281/zenodo.15860560)
+
+---
 
 ## 📚 Further Reading
 
