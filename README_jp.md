@@ -10,9 +10,9 @@
 
 **M予想**は以下をCollapse理論の観点から再解釈する構造的提案です：
 
-- 動機（Motives）  
+- モチーフ（Motives）  
 - Mirror対称性（Mirror Symmetry）  
-- 動機の圏 `𝕄_mot`
+- モチーフ圏 `𝕄_mot`
 
 すべてを **AK Collapse理論** の構造退化と高次元射影を通して定式化します。
 
