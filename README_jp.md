@@ -1,123 +1,127 @@
-# 🌌 M予想（Motivic Collapse Conjecture）
+# 🌌 M予想 — v2.0
 
-**バージョン**：1.0  
-**理論基盤**：AK高次元射影構造理論（AK-HDPST）  
-**ステータス**：構造的に完結・定量的に定式化・型理論的に形式化済
+**バージョン**: 2.0  
+**基盤理論**: AK 高次元射影構造理論（AK-HDPST）  
+**ステータス**: 完全構造化・再帰的整備・型理論的閉包済
 
 ---
 
 ## 🧭 概要
 
-**M予想**は、以下の対象をAK Collapse理論とその高次元射影構造の視点から、  
-構造的・Collapse的に再解釈することを目的としています：
+**M予想**は以下をCollapse理論の観点から再解釈する構造的提案です：
 
-- ミラー対称性（Mirror Symmetry）  
-- モチーフ（Motives）  
-- モチーフ圏 $\mathcal{M}_{\mathrm{mot}}$（Category of Motives）
+- 動機（Motives）  
+- Mirror対称性（Mirror Symmetry）  
+- 動機の圏 `𝕄_mot`
 
-これは単なる哲学的主張ではなく、**定量的に検証可能**で、  
-**形式的に符号化され**、**機械による証明検証が可能**な構造的予想です。
+すべてを **AK Collapse理論** の構造退化と高次元射影を通して定式化します。
 
 ---
 
-## 💡 中核的アイデア
+## 🚩 中心命題（マクロ予想）
 
-> モチーフは超越的なイデアではない。  
-> それは「高次元射影とCollapseによって残された**可観測な構造的残滓**」である。
+### 🔷 M1 — Collapseによる動機生成予想
 
-AK理論におけるモチーフは以下として定義されます：
+> 構造 `𝔽` が以下を満たすとき：
+>
+> - Persistent Homologyが消滅：`PH₁(𝔽) = 0`  
+> - 拡張群が消滅：`Ext¹(𝔽, -) = 0`  
+> - 群が自明化：`G_𝔽 → G_triv`
+>
+> そのとき、AK動機 `M_AK(𝔽)` はCollapseの不動点として生成される：
 
-- **関手的Collapse過程**の出力  
-- 以下の条件を満たす構造：
-
-  - 持続的ホモロジーのCollapse：$\mathrm{PH}_1 = 0$  
-  - Ext群の消滅：$\mathrm{Ext}^1 = 0$  
-  - 群構造の単純化：$G_{\mathcal{F}} \to G_{\mathrm{triv}}$
-
----
-
-## 🔬 形式的主張（Collapse理論による）
-
-$\mathcal{F}_X$ がCollapse許容対象（collapse-admissible）であるとき：
-
-- AK理論的モチーフは次で定義される：
-
-  **M_AK(X) := Pi_mot(F_X)**
-
-- ミラー対称性は構造的に成り立つ：
-
-  **M_AK(X) ≅ M_AK(X^∨)**
-
-- 通常のモチーフは関手的に復元される：
-
-  **M(X) := Φ(M_AK(X))**
+```
+M_AK(𝔽) := Fix_Collapse(𝔽)
+```
 
 ---
 
-## 🧩 MQ1–MQ11: 構成予想群
+### 🔷 M2 — Mirror–動機同型予想
 
-| コード | 名称 | 内容 |
-|--------|------|------|
-| MQ1 | ミラーCollapseスペクトルの一致 | $\Delta_{\mathrm{col}}(X) = \Delta_{\mathrm{col}}(X^\vee)$ |
-| MQ2 | Collapse型とモチーフ階層の対応 | モチーフ構造はCollapse型(I–IV)と対応 |
-| MQ3 | 情報理論的Collapse段階 | Collapse段数に比例してモチーフの情報量が増加 |
-| MQ4 | 群Collapseとモチーフの自明性 | 群が自明 ⇒ モチーフも自明化 |
-| MQ5 | ミラー双対性のCollapse対称性 | Collapseはミラー対象に対しても構造を保存 |
-| MQ6 | AKモチーフ関手の安定性 | 射影・Collapse下で $M_{\mathrm{AK}}$ は安定性を持つ |
-| MQ7 | Collapse不能性と障害の対応 | Collapse不能 ⇔ Grothendieck的障害構造 |
-| MQ8 | Collapseからのモチーフ再構成性 | モチーフはCollapse像として再構成可能 |
-| MQ9 | ホモトピー的Collapse分類 | Collapseによりモチーフがホモトピー分類可能 |
-| MQ10 | Collapse⇔モチーフ変換鎖 | $\mathrm{PH}_1 = 0 \Leftrightarrow \mathrm{Ext}^1 = 0 \Rightarrow M_{\mathrm{AK}} \to M$ |
-| MQ11 | Collapse段数と情報量の比例性 | モチーフのエントロピー ∝ Collapse層数 |
+> Mirrorペア `(X, X∨)` に対し：
+>
+> - Collapseスペクトルが一致するならば：`Δ_col(X) = Δ_col(X∨)`
+>
+> それらのAK動機は同型である：
+
+```
+M_AK(X) ≅ M_AK(X∨)
+```
+
+---
+
+## 🧩 MQ1–MQ11：付随する構造的予想（ミクロ予想）
+
+以下はM1・M2を支えるサブ構造予想です：
+
+| コード | 要約 |
+|--------|------|
+| **MQ1** | MirrorペアならCollapseスペクトル一致：`Δ_col(X) = Δ_col(X∨)` |
+| **MQ2** | Collapseの型分類（I–IV）によって動機階層が定まる |
+| **MQ3** | Collapseステップ数に応じて動機複雑性が増大 |
+| **MQ4** | 群が自明なら動機も自明になる |
+| **MQ5** | Mirror対称性はCollapse構造の対称性として保たれる |
+| **MQ6** | `M_AK` はCollapseと射影に対し函手的安定性をもつ |
+| **MQ7** | Collapse不能 ⇔ Grothendieck的障害の存在 |
+| **MQ8** | Collapse流から動機を再構成可能 |
+| **MQ9** | Collapse分類に基づく動機のホモトピー型分類 |
+| **MQ10** | `[PH₁ = 0 ⇔ Ext¹ = 0] ⇒ M_AK → M_従来型` |
+| **MQ11** | Collapse層数に比例した動機情報エントロピー |
+
+---
+
+## 🔬 Collapse構造の定式化
+
+- **Collapseスペクトル**：`Δ_col(𝔽)` はバーコード的指標  
+- **Collapseエネルギー**：`ℰ_col(𝔽)` はExt/PH₁/群の複雑度合の合成  
+- **不動点構成**：`M_AK(𝔽) := Fix_Collapse(𝔽)`  
+- **従来型動機との接続**：`M(X) := Φ(M_AK(X))`
 
 ---
 
 ## 🧠 哲学的転換
 
-従来のモチーフは：
-
-- 形而上学的  
-- 到るところにあるが定義は曖昧  
-- 可視性がない  
-- 構造的に漠然としていた  
-
-**M予想におけるモチーフ**は：
-
-- Collapseによって生成される  
-- 関手的に明示される  
-- 構造的に定量化可能  
-- 観測可能な簡約機構に整合している  
+| 従来型動機 | AK理論的動機 |
+|------------|--------------|
+| 抽象的・形而上的 | 観測可能・構成的 |
+| 視覚化困難 | Collapseにより視覚生成可能 |
+| 函手的定義なし | Collapseの固定点として定義可能 |
+| 構造因果の外部 | 構造退化により自然発生 |
 
 ---
 
-### 🔮 この予想が正しければ何が起こるか？
+## 🔮 成立時のインパクト
 
-- モチーフの構造的な「神秘性」の解消  
-- ミラー対称性の視覚的かつ検証可能な定式化  
-- Collapseによるモチーフ分類への直接的アクセス  
-- 数論・代数幾何・ホモトピー論を、可観測な構造簡約を通じて統合する可能性  
-
----
-
-### 📁 ファイル構成
-
-- `The_M_Conjecture.tex`: LaTeX形式の完全ソース  
-- `The_M_Conjecture.PDF`: 出力PDF  
-- `README.md`: 本ドキュメント  
+- 動機の抽象性を**視覚的・構造的に解体**  
+- Mirror対称性の**定量的・検証可能モデル**  
+- Collapseに基づく**動機分類の新体系**  
+- 数論・代数幾何・ホモトピー理論の**Collapse統合**
 
 ---
 
-## 📚 関連理論
+## 📁 ファイル構成
 
-- [AK高次元射影構造理論（AK-HDPST）](https://github.com/Kobayashi2501/AK-High-Dimensional-Projection-Structural-Theory)
+- `The_M_Conjecture.tex` — 本文LaTeXソース  
+- `The_M_Conjecture.pdf` — コンパイル済PDF  
+- `README.md` — 本ファイル（v2.0）
 
 ---
 
-### 📬 連絡先
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15860560.svg)](https://doi.org/10.5281/zenodo.15860560)
 
-**著者**：A. Kobayashi  
-_ChatGPTリサーチパートナーと共同開発_  
+---
+
+## 📚 関連リンク
+
+- [AK高次元射影構造理論](https://github.com/Kobayashi2501/AK-High-Dimensional-Projection-Structural-Theory)
+
+---
+
+## 📬 著者情報
+
+**著者**: A. Kobayashi（小林篤史）  
+_構造設計支援：ChatGPT Research Partner_  
 📧 Email: [dollops2501@icloud.com](mailto:dollops2501@icloud.com)  
 🐙 GitHub: [@Kobayashi2501](https://github.com/Kobayashi2501)
 
-> *Collapseは崩壊ではない。— それは構造的本質の出現である。*
+> *Collapseとは崩壊ではなく、構造本質の顕現である。*
